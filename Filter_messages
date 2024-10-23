@@ -1,0 +1,24 @@
+def filter_messages(messages):
+    filter_messages = []
+    words_removed = []
+
+    for message in messages:
+        words = message.split()
+        good_words = []
+        n = 0
+
+        
+        for word in words:
+            
+              if word == "dang":
+                   n += 1
+              else:
+                   good_words.append(word)
+        
+        good_words = " ".join(good_words)
+        filter_messages.append(good_words)
+        words_removed.append(n)
+
+    return filter_messages , words_removed
+        
+
