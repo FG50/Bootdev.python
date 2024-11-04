@@ -1,0 +1,21 @@
+def get_most_common_enemy(enemies_dict):
+
+    max_so_far = float("-inf")
+    max_one_first_found = None 
+    """
+    Se avessimo inizializzato con most_common_enemy = 0, avremmo potuto avere problemi perché:
+    0 non è un nome valido di nemico
+    Non avremmo potuto distinguere tra "nessun nemico trovato" e "il nemico si chiama 0"
+    
+    """
+    if not enemies_dict:
+         return None 
+
+    for enemy in enemies_dict:
+        if enemies_dict[enemy] > max_so_far:
+           max_so_far = enemies_dict[enemy] # prendo il valore dal dizionario e lo metto in max_so_far
+                                            # enemies_dict[enemy] = max_so_far Attenzione! 
+                                            # così facendo modificherei il valore nel dizionario mettendoci quello di max_so_far
+           max_one_first_found = enemy 
+
+    return first_one_found        
