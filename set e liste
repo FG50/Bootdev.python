@@ -1,0 +1,31 @@
+Complete the remove_duplicates function. 
+It should take a list of spells that a player has learned and return a new List where there is at most one of each title. You can accomplish this in at least two ways:
+
+Iteration:
+
+1) Iteration:
+
+Create a set and add all the spells to it
+Iterate over the set and add all the spells into a new List and returning the list.
+
+
+    lista = []   #inizializzo una lista
+    nuovo = set(spells) #creo un set e ci aggiungo spells
+    for spell in nuovo: #itero ogni elemento nel set nuovo 
+        lista.append(spell) #aggiungo ogni elemenot alla lista 
+    return lista 
+        
+
+
+
+2) Set conversion:
+
+Convert the list to a set
+Convert the set back to a list and return it.
+
+nuovo = set(spells) #creo un set e aggiungo spells 
+lista = list(nuovo) #trasformo il set appena creato (nuovo) in una lista con la funzione list()
+return lista
+
+
+
