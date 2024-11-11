@@ -1,0 +1,13 @@
+Assignment
+Complete the find_missing_ids function. It accepts two lists as input, and returns a new list of all the ids present in the first list but not the second. Make sure to remove any duplicate
+
+
+def find_missing_ids(first_ids, second_ids):
+    ids = first_ids + second_ids 
+    nuovo = set()
+   
+    for id in ids:
+        if id not in second_ids:
+            nuovo.add(id) // aggiungo gli id che non non sono in second_ids senza duplicati perché aggiungo ad un set 
+        
+    return list(nuovo) //nuova lista contenente tutti gli ids presenti nella prima lista ma non nella seconda 
